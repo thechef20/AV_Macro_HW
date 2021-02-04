@@ -24,12 +24,3 @@ xlabel('k_t')
 saveas(gcf,'stedy_state_1.png')
 
 %part c
-
-kval(1)=67.32;
-for jj=2:100
-    kval(jj,1)=(0.9*kval(jj-1,1)+1.5*kval(jj-1,1)^(0.4))/1.02;
-end
-
-b=figure;
-plot(kval)
-ylabel('k')
