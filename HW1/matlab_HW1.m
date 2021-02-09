@@ -73,24 +73,24 @@ yval=zeros(100,1);
 %Loop to simulate
 
 capital_val(1)=kss;
-z_values(1) = exp(0.1*normrnd(0,1)); 
-yval(1)=5*z_values*kss^0.4;
+z_values(1) = exp(0.1*normrnd(0,1)) 
+yval(1)=5*kss^0.4*z_values;
 
 for j=2:100
     z_values(j) = z_values(j-1)^0.6* exp(0.1*normrnd(0,1));
-    capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.5*yval(j-1));
-    yval(j)=z_values(j)*capital_val(j)^0.4;
+    capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.1*yval(j-1));
+    yval(j)=5*z_values(j)*capital_val(j)^0.4;
 end
 
 clf
-plot(capital_val)
-ylabel('Consumption')
+plot(capital_val(2:end))
+ylabel('Capital')
 xlabel('peroids')
-title("Consumption per worker")
+title("Capital per Worker")
 saveas(gcf,'pics/HW1_Q3_b1.png')
 
 clf
-plot(yval)
+plot(yval(2:end))
 ylabel('Output')
 xlabel('Peroids')
 title("Consumption per worker")
@@ -102,7 +102,6 @@ clear
 %Steady state value
 kss=84.1078/2
 
-
 %Pre-defining matrices
 capital_val=zeros(100,1);
 yval=zeros(100,1);
@@ -110,24 +109,24 @@ yval=zeros(100,1);
 %Loop to simulate
 
 capital_val(1)=kss;
-z_values(1) = exp(0.1*normrnd(0,1)); 
+z_values(1) = exp(0.1*normrnd(0,1)) 
 yval(1)=5*z_values*kss^0.4;
 
 for j=2:100
     z_values(j) = z_values(j-1)^0.6* exp(0.1*normrnd(0,1));
-    capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.5*yval(j-1));
-    yval(j)=z_values(j)*capital_val(j)^0.4;
+    capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.1*yval(j-1));
+    yval(j)=5*z_values(j)*capital_val(j)^0.4;
 end
 
 clf
-plot(capital_val)
+plot(capital_val(2:end))
 ylabel('Consumption')
 xlabel('peroids')
 title("Consumption per worker")
 saveas(gcf,'pics/HW1_Q3_c1.png')
 
 clf
-plot(yval)
+plot(yval(2:end))
 ylabel('Output')
 xlabel('Peroids')
 title("Consumption per worker")
