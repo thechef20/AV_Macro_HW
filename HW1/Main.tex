@@ -30,26 +30,39 @@
     \item The economy in question 1 is at the steady state for 10 periods. In the eleventh period, the savings rate increases to 30\% and remains there. Simulate the economy for 100 periods (10 before the change, 90 with the new savings rate). Plot capital per worker, output per worker and consumption per worker on separate graphs for those 100 periods. Include the figure in the pdf. What do you notice in the figure?
     \begin{figure}[h]
         \centering
-        \includegraphics[width =.5\linewidth]{pics/HW1/HW1_Q2_a.png}
+        \includegraphics[width =.5\linewidth]{HW1/pics/HW1_Q2_a.png}
         \caption{Capital per Worker}
     \end{figure}
     \vspace{-.5cm}
     \begin{figure}[h]
         \centering
-        \includegraphics[width =.5\linewidth]{pics/HW1/HW1_Q2_b.png}
+        \includegraphics[width =.5\linewidth]{HW1/pics/HW1_Q2_b.png}
         \caption{Output per Worker}
     \end{figure}
     \begin{figure}[h]
         \centering
-        \includegraphics[width =.5\linewidth]{pics/HW1/HW1_Q2_c.png}
+        \includegraphics[width =.5\linewidth]{HW1/pics/HW1_Q2_c.png}
         \caption{Consumption per Worker}
     \end{figure}
 \item A stochastic Solow model has the following features
 \begin{enumerate}
     \item What is the stable steady state level of capital per worker?
-    we will first  calculate the steady state assuming that $z_{t}$ is zero so we will solve $\frac{(1-\delta)k_t+\sigma A_0 f(k_t)}{(1+n)} = k = \frac{(.975)*k_t+(0.1*5)*k^{0.4}}{(1.01)}= 84.1078$
+    we will first  calculate the steady state assuming that $z_{t}$ is 1 (so it has no effect). Thus we will solve $\frac{(1-\delta)k_t+\sigma A_0 f(k_t)}{(1+n)} = k = \frac{(.975)*k_t+(0.1*5)*k^{0.4}}{(1.01)}= 84.1078$
     \item it is not explicitly listed but we will use a random normal with a $\sigma =1 \text{ and } \mu =0$ and $z_0 =e^{\sim N(0,1)}$
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width =.5\linewidth]{HW1/pics/HW1_Q3_b1.png}
+        \caption{Consumption per Worker}
+    \end{figure}
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width =.5\linewidth]{HW1/pics/HW1_Q3_b2.png}
+        \caption{Output per Worker}
+    \end{figure}
 \end{enumerate}
+
 \end{enumerate}
 
 
