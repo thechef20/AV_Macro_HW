@@ -44,27 +44,27 @@ for jj=11:100
 end
 plot(capital_val)
 ylabel('k')
-xlabel('peroids')
+xlabel('Peroids')
 title("Capital per worker")
-saveas(gcf,'HW1_Q2_a.png')
+saveas(gcf,'pics/HW1_Q2_a.png')
 clf
 plot(output_vals)
 ylabel('Output')
-xlabel('peroids')
+xlabel('Peroids')
 title("Output per worker")
-saveas(gcf,'HW1_Q2_b.png')
+saveas(gcf,'pics/HW1_Q2_b.png')
 clf
 plot(consumptuion)
 ylabel('Consumption')
-xlabel('peroids')
+xlabel('Peroids')
 title("Consumption per worker")
-saveas(gcf,'HW1_Q2_c.png')
+saveas(gcf,'pics/HW1_Q2_c.png')
 %%
 
 clear
 
 %Steady state value
-kss=84.1078
+kss=84.1078;
 
 %Pre-defining matrices
 capital_val=zeros(100,1);
@@ -73,22 +73,28 @@ yval=zeros(100,1);
 %Loop to simulate
 
 capital_val(1)=kss;
-yval(1)=exp(normrnd(0,0.5))*kss^0.4;
+z_values(1) = exp(0.1*normrnd(0,1)); 
+yval(1)=5*z_values*kss^0.4;
 
 for j=2:100
+    z_values(j) = z_values(j-1)^0.6* exp(0.1*normrnd(0,1));
     capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.5*yval(j-1));
-    yval(j)=exp(normrnd(0,0.5))*capital_val(j)^0.4;
+    yval(j)=z_values(j)*capital_val(j)^0.4;
 end
 
-a=figure;
+clf
 plot(capital_val)
-ylabel('k')
+ylabel('Consumption')
+xlabel('peroids')
+title("Consumption per worker")
+saveas(gcf,'pics/HW1_Q3_b1.png')
 
-b=figure;
+clf
 plot(yval)
-ylabel('y')
-saveas(gcf,'question_3a.png')
-
+ylabel('Output')
+xlabel('Peroids')
+title("Consumption per worker")
+saveas(gcf,'pics/HW1_Q3_b2.png') 
 %%
 
 clear
@@ -97,7 +103,35 @@ clear
 kss=84.1078/2
 
 
+%Pre-defining matrices
+capital_val=zeros(100,1);
+yval=zeros(100,1);
 
+%Loop to simulate
+
+capital_val(1)=kss;
+z_values(1) = exp(0.1*normrnd(0,1)); 
+yval(1)=5*z_values*kss^0.4;
+
+for j=2:100
+    z_values(j) = z_values(j-1)^0.6* exp(0.1*normrnd(0,1));
+    capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.5*yval(j-1));
+    yval(j)=z_values(j)*capital_val(j)^0.4;
+end
+
+clf
+plot(capital_val)
+ylabel('Consumption')
+xlabel('peroids')
+title("Consumption per worker")
+saveas(gcf,'pics/HW1_Q3_c1.png')
+
+clf
+plot(yval)
+ylabel('Output')
+xlabel('Peroids')
+title("Consumption per worker")
+saveas(gcf,'pics/HW1_Q3_c2.png') 
 
 
 

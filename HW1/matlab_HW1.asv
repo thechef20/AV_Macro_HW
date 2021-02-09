@@ -28,6 +28,7 @@ saveas(gcf,'stedy_state_1_.png')
 
 %part c
 %% Question 2
+clear 
 capital_val(1)=67.32;
 output_vals(1) = 10*capital_val(1)^.4
 consumption_values = output_vals(1)*(1-.15)
@@ -72,9 +73,11 @@ yval=zeros(100,1);
 %Loop to simulate
 
 capital_val(1)=kss;
-yval(1)=exp(normrnd(0,0.5))*kss^0.4;
+z_values(1) = exp(normrnd(0,1)); 
+yval(1)=5*z_values*kss^0.4;
 
 for j=2:100
+    z_values(j,1) = z_values(j-1,1)^0.6+ exp(normrnd(0,1))
     capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.5*yval(j-1));
     yval(j)=exp(normrnd(0,0.5))*capital_val(j)^0.4;
 end
@@ -87,43 +90,13 @@ b=figure;
 plot(yval)
 ylabel('y')
 saveas(gcf,'question_3a.png')
-
+ 
 %%
 
 clear
 
 %Steady state value
 kss=84.1078/2
-
-%Pre-defining matrices
-
-num_per =100
-capital_val=zeros(num_per,1);
-yval=zeros(num_per,1);
-
-%Loop to simulate
-
-capital_val(1)=kss;
-yval(1)=exp(normrnd(0,0.5))*kss^0.4;
-
-for j=2:num_per
-    capital_val(j)=(1/1.01)*(0.975*capital_val(j-1)+0.5*yval(j-1));
-    yval(j)=exp(normrnd(0,0.5))*capital_val(j)^0.4;
-end
-
-a=figure;
-plot(capital_val)
-ylabel('k')
-
-b=figure;
-plot(yval)
-ylabel('y')
-print(b,'-djpeg','ECON355_Ouput_Example.jpg')
-
-
-
-
-
 
 
 
