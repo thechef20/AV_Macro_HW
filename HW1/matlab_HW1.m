@@ -129,7 +129,7 @@ clf
 plot(yval(2:end))
 ylabel('Output')
 xlabel('Peroids')
-title("Consumption per worker")
+title("Output per worker")
 saveas(gcf,'pics/HW1_Q3_c2.png') 
 
 
