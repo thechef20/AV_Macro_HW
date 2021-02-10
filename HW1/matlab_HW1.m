@@ -59,7 +59,7 @@ ylabel('Consumption')
 xlabel('Peroids')
 title("Consumption per worker")
 saveas(gcf,'pics/HW1_Q2_c.png')
-%%
+%% Question 3
 
 clear
 
@@ -83,14 +83,14 @@ for j=2:100
 end
 
 clf
-plot(capital_val(2:end))
+plot(capital_val)
 ylabel('Capital')
 xlabel('peroids')
 title("Capital per Worker")
 saveas(gcf,'pics/HW1_Q3_b1.png')
 
 clf
-plot(yval(2:end))
+plot(yval)
 ylabel('Output')
 xlabel('Peroids')
 title("Consumption per worker")
@@ -132,7 +132,7 @@ xlabel('Peroids')
 title("Output per worker")
 saveas(gcf,'pics/HW1_Q3_c2.png') 
 
-%%
+%% Question 4
 clear 
 sub_divisions = 1/100;
 n = 10
