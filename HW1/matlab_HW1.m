@@ -1,4 +1,4 @@
-%last edited 3/2/21
+%last edited 2/9/21
 %Matthew Chistolini
 
 %% Question 1 and 2
@@ -131,6 +131,26 @@ ylabel('Output')
 xlabel('Peroids')
 title("Output per worker")
 saveas(gcf,'pics/HW1_Q3_c2.png') 
+
+%%
+clear 
+sub_divisions = 1/100;
+n = 10
+delta = .1
+A_bar = .5
+k_plus_valus= [];
+k_values = [];
+for i=sub_divisions:sub_divisions:n
+kvals(round(i*(1/sub_divisions)))= i;
+sigma= 1/(1+.25*i^(-0.75));
+k_plus_valus(round(i*(1/sub_divisions))) = ((1-delta)*i +sigma*A_bar*i^.4)*(1/1.02);
+end
+
+plot(kvals',k_plus_valus')
+xlabel("k_t Values")
+ylabel("k_{t+1} Values")
+saveas(gcf,'pics/HW1_Q4.png') 
+
 
 
 
