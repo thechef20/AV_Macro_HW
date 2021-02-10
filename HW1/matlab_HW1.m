@@ -48,7 +48,7 @@ yval=zeros(100,1);
 %Loop to simulate
 
 capital_val(1)=kss;
-z_values(1) = exp(0.1*normrnd(0,1)) ;
+z_values(1) = exp(0.1*normrnd(0,1));
 yval(1)=5*kss^0.4*z_values;
 
 for j=2:100
