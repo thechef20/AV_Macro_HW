@@ -28,7 +28,7 @@ capital=[capital_0];
 consumption=[];
 peroid = [1:1:20];
 for i =peroid
-    current_peroid_output = (capital(end)^theta*Labor(end)^(1-theta))/Labor(end);
+    current_peroid_output = ((capital(end)*Labor(end))^theta*Labor(end)^(1-theta))/Labor(end);
     output = [output; current_peroid_output];
     current_peroid_consumption = cons*output(end)^theta;
     consumption = [consumption; current_peroid_consumption];
@@ -39,16 +39,16 @@ for i =peroid
 end
 
 clf;
-plot(peroid,output)
+plot(peroid,output,'LineWidth',3)
 ylabel('output per person')
 xlabel('time(in peroids)')
-title("Question 3 part C output per worker")
+title("Question 3 part C output per Worker")
 saveas(gcf,'pics/HW1_Q3_c_output.png')
 
 
 clf
-plot(peroid,consumption)
+plot(peroid,consumption,'LineWidth',3)
 ylabel('consumption per person')
 xlabel('time(in peroids)')
-title("Question 3 part C consumption per worker")
+title("Question 3 part C Consumption per Worker")
 saveas(gcf,'pics/HW1_Q3_c_consumption.png')
