@@ -1,3 +1,25 @@
 \begin{enumerate}
-    \item  
+    \item Defining some givens and budget constraints  $$u(c^h_t(t),c^h_t(t+1))=\frac{c^h_t(t)^{1-\sigma}}{1-\sigma}+\beta\frac{c^h_t(t+1)^{1-\sigma}}{1-\sigma}$$
+    $$y(t)=K(t)^\theta H(t)^{1-\theta}$$
+    $$H(t)=(1+n)H_0$$
+    $$c_t^h(t+1) = R(t)W(t)h^h_t(t)-R(t)C_t^h(t)$$
+    Let's take the max
+    $$\max_{c^h_t(t)} \frac{c^h_t(t)^{1-\sigma}}{1-\sigma}+\beta\frac{( R(t)W(t)h^h_t(t)-R(t)C_t^h(t))^{1-\sigma}}{1-\sigma}$$
+    take a first derivative with respect to $c_t^h(t)$
+    $$c^h_t(t)^{-\sigma}+\beta( R(t)W(t)h^h_t(t)-R(t)C_t^h(t))^{-\sigma}*(-R(t))=0$$
+    $$c^h_t(t)^{-\sigma}=\beta( R(t)W(t)h^h_t(t)-R(t)C_t^h(t))^{-\sigma}*(R(t))$$
+    $$c^h_t(t)=\beta^{-\frac{1}{\sigma}}\frac{( R(t)W(t)h^h_t(t)-R(t)C_t^h(t))}{(R(t))^{\frac{1}{\sigma}}}$$
+    $$c^h_t(t)=\beta^{-\frac{1}{\sigma}}\frac{( R(t)W(t)h^h_t(t)}{(R(t))^\frac{1}{\sigma}}-\beta^{-\frac{1}{\sigma}} \frac{R(t)C_t^h(t))}{(R(t))^{\frac{1}{\sigma}}}$$
+    $$c^h_t(t)+\beta^{-\frac{1}{\sigma}} \frac{R(t)C_t^h(t))}{(R(t))^{\frac{1}{\sigma}}}=\beta^{-\frac{1}{\sigma}}\frac{( R(t)W(t)h^h_t(t)}{(R(t))^\frac{1}{\sigma}}$$    
+    $$c^h_t(t)(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})=\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}W(t)h^h_t(t))$$
+    $$c^h_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}W(t)h^h_t(t))}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})}$$
+    Aggregate all of the individuals
+    $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}W(t)H_t(t))}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
+    $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}K(t)^{\theta}H_t(t)^{-\theta}H_t(t))}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
+    $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
+    \item RETURN TO!!!
+    let $\beta=0.99, Y(t)=2, \sigma=0.5, R(t)=1.05$
+     $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
+    \item 
+    $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
 \end{enumerate}

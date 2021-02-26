@@ -1,3 +1,18 @@
 \begin{enumerate}
     \item  
+    $$ c^t_h(t+1) = w(t)h^h_t(t)R(t)+(1+n-R(t))*T-R(t)c^h_t$$
+    $$\max_{c^h_t(t)} ~ ln(c_t^h)+\beta ln(w(t)h^h_t(t)R(t)+(1+n-R(t))*T-R(t)c^h_t)$$
+    take the first derivative 
+    $$ \frac{1}{c_t^h}+\beta*\frac{-R(t)}{(w(t)h^h_t(t)R(t)+(1+n-R(t))*T-R(t)c^h_t)}=0$$
+    $$ \frac{1}{c_t^h}=\beta*\frac{R(t)}{(w(t)h^h_t(t)R(t)+(1+n-R(t))*T-R(t)c^h_t)}$$
+    $$ \beta R(t)c_t^h=(w(t)h^h_t(t)R(t)+(1+n-R(t))*T-R(t)c^h_t)$$
+    $$ \beta R(t)c_t^h+R(t)c^h_t=w(t)h^h_t(t)R(t)+(1+n-R(t))*T$$
+    $$ (R(t)+R(t)\beta)c^h_t=w(t)h^h_t(t)R(t)+(1+n-R(t))*T$$
+    $$ c^h_t=\frac{w(t)h^h_t(t)R(t)+(1+n-R(t))*T}{(R(t)+R(t)\beta)}$$
+    now we will look at the aggregated case
+    $$ C_t=\frac{w(t)H^h_t(t)R(t)+(1+n-R(t))*T}{R(t)(1+\beta)}$$
+    $$ C_t=\frac{1}{R(t)(1+\beta)}((1-\theta)K(t)^{\theta} H(t)^{\theta-1}R(t)+(1+n-R(t))*T)$$
+    $$ C_t=\frac{1}{R(t)(1+\beta)}((1-\theta)Y(t)R(t)+(1+n-R(t))*T)$$
+     $$ C_t=\frac{1}{(1+\beta)}((1-\theta)Y(t)+\frac{(1+n)*T}{R(t)}-T)$$
+
 \end{enumerate}
