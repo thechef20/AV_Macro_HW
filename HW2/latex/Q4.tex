@@ -1,3 +1,29 @@
-\begin{enumerate}
-    \item  
+
+for\begin{enumerate}
+    \item .\\
+    utility function: $$u(c_t)=ln(c_t)$$
+    budget constraint:$$k_{t+1}=(1-\delta)k_t+i_t$$ 
+    Feasibility constraint $$ y(t)=f(k_t)=k^\alpha _t\geq c_t+i_t$$
+    
+plug in constrains to one another to get rid of the investment constraint for another constraint
+$$c_t=f(k_t)-k_{t+1}+(1-\delta)k_t$$
+now we want to do a bit of maximiaztion
+
+$$\max_{k_{t+1},c_s,i_s} \sum^\infty_{i=0}\beta^i[U(c_{t+i})-\lambda_{t+i}(k_{t+i+1}-(1-\delta)k_{t+i}-i_{t+1})-\lambda^2_{t+i}(f(k_{t+i})-c_{t+i}-i_{t_i})]$$
+
+$$\max_{k_{t+1},c_s,i_s} \sum^\infty_{i=0}\beta^i[ln(c_t)-\lambda_{t+i}(k_{t+i+1}-(1-\delta)k_{t+i}-i_{t+1})-\lambda^2_{t+i}(k_{i+t}^\alpha-c_{t+i}-i_{t_i})]$$
+
+partial 1:
+$$\frac{\partial L}{\partial K_{s+1}}= -\lambda^1_s+\beta(1=\delta)\lambda^1_{s+1}-\beta\lambda^2_{s+1}\alpha x^{\alpha-1}=0$$
+partial 2:
+$$\frac{\partial L}{\partial c_s}= \frac{1}{c_s}+\lambda^2_s=0$$
+$$\frac{1}{c_s}=-\lambda^2_s$$
+partial 3:
+$$\frac{\partial L}{\partial i_s}= \lambda^1_s+\lambda^2_s=0$$
+$$ \lambda^1_s=-  \lambda^2_s$$
+
+plug into partial 1 with other lambdas info
+\item .
+\item. transverality 
+$$\max_{\{x_x\}^\infty_{s=t}}\sum^\infty_{i=0}\beta{^iF(x_{t+i},x_{t+1+i}})$$
 \end{enumerate}
