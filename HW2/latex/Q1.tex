@@ -17,9 +17,33 @@
     $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}W(t)H_t(t))}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
     $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}K(t)^{\theta}H_t(t)^{-\theta}H_t(t))}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
     $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
-    \item RETURN TO!!!
+    \item 
     let $\beta=0.99, Y(t)=2, \sigma=0.5, R(t)=1.05$
      $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
-    \item 
+
+    take partial W.R.T R(t)
+    $$\frac{\partial C_t}{\partial R(t)} \frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})}$$
+    plug in
+    $$ \frac{\partial C_t}{\partial R(t)} ~ \frac{\beta^{-2}( R(t)(.5)*2)}{(1+\beta^{-2} R(t))}$$
+    $$ \frac{\partial C_t}{\partial R(t)} ~ \frac{\beta^{-2}( R(t))}{(1+\beta^{-2} R(t))}$$
+    $$ \frac{\partial C_t}{\partial R(t)} ~ \frac{\beta^{-2}( R(t))}{(1+\beta^{-2} R(t))}$$
+    $$\frac{\beta^2}{1+R(t)\beta^2}$$ (not sure why i didn't plug in beta earlier)
+    solve for R(t)=1.05
+    $$\frac{.99^2}{\left(.99^2+1.05\right)^2}=0.237$$
+    
+    let $\beta=0.99, Y(t)=2, \sigma=2, R(t)=1.05$
     $$C_t(t)=\frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})} $$
+    take partial W.R.T R(t)
+    $$\frac{\partial C_t}{\partial R(t)} \frac{\beta^{-\frac{1}{\sigma}}( R(t)^{\frac{1-\sigma}{\sigma}}(1-\theta)Y(t)}{(1+\beta^{-\frac{1}{\sigma}} R(t)^{\frac{1-\sigma}{\sigma}})}$$
+    plug in
+     $$\frac{\partial C_t}{\partial R(t)} \frac{.99^{-.5}( R(t)^{-.5}(-2))}{(1+.99^{-.5} R(t)^{-.5})}$$
+     $$\frac{0.9801}{\sqrt{x}\left(\sqrt{x}+0.9801\right)^2}=0.237$$
+     
+     \item if $\sigma =1$
+    $$C_t(t)=\frac{\beta^{-1}( R(t)^{1}(1-\theta)Y(t)}{(1+\beta^{-1} R(t)^{1})} $$
+    $$C_t(t)=\frac{\beta^{-1}( (1-\theta)Y(t)}{(1+\beta^{-1} )} $$
+    in the case where $\sigma =1$ it is no longer dependent on the real interest rate R(t)
+    
+    \item
+    the difference between how (a) behaves and what we saw in class is the dependence on R(t). This results in the individuals considering the real interest rate in their choice in consumption. As interest rates increase the consumption also increases. 
 \end{enumerate}

@@ -14,7 +14,7 @@ $$\max_{k_{t+1},c_s,i_s} \sum^\infty_{i=0}\beta^i[U(c_{t+i})-\lambda_{t+i}(k_{t+
 $$\max_{k_{t+1},c_s,i_s} \sum^\infty_{i=0}\beta^i[ln(c_t)-\lambda_{t+i}(k_{t+i+1}-(1-\delta)k_{t+i}-i_{t+1})-\lambda^2_{t+i}(k_{i+t}^\alpha-c_{t+i}-i_{t_i})]$$
 
 partial 1:
-$$\frac{\partial L}{\partial K_{s+1}}= -\lambda^1_s+\beta(1=\delta)\lambda^1_{s+1}-\beta\lambda^2_{s+1}\alpha x^{\alpha-1}=0$$
+$$\frac{\partial L}{\partial K_{s+1}}= -\lambda^1_s+\beta(1-\delta)\lambda^1_{s+1}-\beta\lambda^2_{s+1}\alpha k^{\alpha-1}=0$$
 partial 2:
 $$\frac{\partial L}{\partial c_s}= \frac{1}{c_s}+\lambda^2_s=0$$
 $$\frac{1}{c_s}=-\lambda^2_s$$
@@ -22,8 +22,24 @@ partial 3:
 $$\frac{\partial L}{\partial i_s}= \lambda^1_s+\lambda^2_s=0$$
 $$ \lambda^1_s=-  \lambda^2_s$$
 
-plug into partial 1 with other lambdas info
 \item .
-\item. transverality 
+Capital: Give  $k_{t+1}=g(k_t)$ formula from class
+$$\frac{k^\alpha_{t+1}-k_{t-2}}{k^\alpha_{t}-k_{t+1}}=\alpha \beta k^{\alpha-1}_{t+1}$$
+the result from class ends up where
+%Given: $ u(c)=ln(c_t), F(t)=k^\alpha$
+$$k_{t+1}=\frac{\alpha \beta}{1+A-\alpha \beta}k^\alpha_t$$
+We know that
+$$\Bar{K}(1-A+\alpha \beta)=\alpha \beta^{-\alpha}_{t+1}$$
+now lets solve for steady state!
+$$\Bar{K}^{\alpha +1}=\frac{1-A+\alpha \beta}{\alpha \beta}-->$$ 
+$$\Bar{k}=(\frac{1-A+\alpha \beta}{\alpha \beta})^{\frac{1}{\alpha +1}}$$
+
+Consumption: $\Bar{C}=[-\delta+\frac{1}{\beta \theta}-\frac{1-\delta}{\theta}][\frac{1-A+\alpha \beta}{\alpha \beta}]$\\
+Investment: $\Bar{i}=1-\Bar{C}=1-[-\delta+\frac{1}{\beta \theta}-\frac{1-\delta}{\theta}][\frac{1-A+\alpha \beta}{\alpha \beta}]$
+
+\item. Transverality 
 $$\max_{\{x_x\}^\infty_{s=t}}\sum^\infty_{i=0}\beta{^iF(x_{t+i},x_{t+1+i}})$$
+$$\lim_{i \rightarrow \infty}[\beta^i u'(f(k_{t+i})-k_{t+i+1}+(1-\delta)k_{t+i})(f'(k_{t+i}+(1-\delta))k_{t+i}]$$
+$$\lim_{i \rightarrow \infty}[\beta^i \frac{1}{f(k_{t+i})-k_{t+i+1}+(1-\delta)k_{t+i}}(\alpha k_{t+i}^{\alpha-1}+(1-\delta))k_{t+i}]$$
+
 \end{enumerate}
