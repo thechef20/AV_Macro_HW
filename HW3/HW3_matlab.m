@@ -33,7 +33,6 @@ while jk<=maxits
         kt=k0(j);
         %find the maximum of the value function (minus the minimum)
         ktp1=fminbnd(@question_1,0,maxk);
-        %kt_plus_one_vector(j)=ktp1;
         %Note: valfun calculates the negative of the value function since
         %fminbnd finds a minimum
         kt_plus_one_vector(j)=ktp1;
@@ -61,4 +60,3 @@ hold on
 plot(k0,kt_plus_one_vector)
 legend('straight line','K_{t+1}')
 saveas(gcf,'pics/HW3_Q1_figure.png')
-
