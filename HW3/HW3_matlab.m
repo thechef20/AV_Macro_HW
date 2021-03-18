@@ -53,7 +53,7 @@ end
 subplot(2,1,1)
 %Plot the final value function
 plot(k0,vlast, 'lineWidth',2)
-title('Value function','Fontsize',16)
+title('Value Function','Fontsize',16)
 subplot(2,1,2)
 plot(k0,k0)
 hold on
