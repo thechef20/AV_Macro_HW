@@ -53,11 +53,12 @@ end
 %%
 subplot(2,1,1)
 %Plot the final value function
-plot(k0,vlast)
-
+plot(k0,vlast, 'lineWidth',2)
+title('Value function','Fontsize',16)
 subplot(2,1,2)
 plot(k0,k0)
 hold on
 plot(k0,kt_plus_one_vector)
+title('Capital Evolution','Fontsize',16)
 legend('straight line','K_{t+1}')
 saveas(gcf,'pics/HW3_Q2_figure.png')
