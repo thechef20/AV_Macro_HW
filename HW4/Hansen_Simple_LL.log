@@ -1,0 +1,79 @@
+Starting preprocessing of the model file ...
+WARNING: in the 'steady_state_model' block, variable 'h' is not assigned a value
+Found 8 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+y      		 0
+c      		 0
+k      		 0
+h      		 0
+r      		 0
+lambda 		 0
+i      		 0
+w      		 0
+
+MODEL SUMMARY
+
+  Number of variables:         8
+  Number of stochastic shocks: 1
+  Number of state variables:   2
+  Number of jumpers:           2
+  Number of static variables:  4
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables     epsilon
+epsilon      0.000010
+
+POLICY AND TRANSITION FUNCTIONS
+                                   y               c               k               h               r          lambda               i               w
+k(-1)                       0.204460        0.569103        0.953674       -0.243031       -0.795540               0       -0.853044        0.447491
+lambda(-1)                  1.379669        0.372367        0.107524        0.671357        1.379669        0.950000        4.300956        0.708311
+epsilon                     1.452283        0.391965        0.113183        0.706692        1.452283        1.000000        4.527322        0.745591
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+y              0.0000     0.0176     0.0003
+c              0.0000     0.0130     0.0002
+k              0.0000     0.0175     0.0003
+h              0.0000     0.0054     0.0000
+r              0.0000     0.0117     0.0001
+lambda         0.0000     0.0103     0.0001
+i              0.0000     0.0382     0.0015
+w              0.0000     0.0142     0.0002
+
+
+
+MATRIX OF CORRELATIONS
+Variables         y       c       k       h       r  lambda       i       w
+y            1.0000  0.9013  0.8081  0.7202  0.3420  0.9887  0.9039  0.9643
+c            0.9013  1.0000  0.9835  0.3485 -0.0989  0.8262  0.6294  0.9838
+k            0.8081  0.9835  1.0000  0.1733 -0.2772  0.7107  0.4785  0.9352
+h            0.7202  0.3485  0.1733  1.0000  0.8983  0.8160  0.9477  0.5107
+r            0.3420 -0.0989 -0.2772  0.8983  1.0000  0.4789  0.7111  0.0809
+lambda       0.9887  0.8262  0.7107  0.8160  0.4789  1.0000  0.9578  0.9137
+i            0.9039  0.6294  0.4785  0.9477  0.7111  0.9578  1.0000  0.7583
+w            0.9643  0.9838  0.9352  0.5107  0.0809  0.9137  0.7583  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+y         0.9640  0.9291  0.8954  0.8628  0.8312
+c         0.9949  0.9880  0.9794  0.9694  0.9580
+k         0.9988  0.9954  0.9900  0.9828  0.9740
+h         0.9069  0.8205  0.7403  0.6659  0.5970
+r         0.9133  0.8327  0.7577  0.6880  0.6233
+lambda    0.9500  0.9025  0.8574  0.8145  0.7738
+i         0.9244  0.8538  0.7879  0.7263  0.6689
+w         0.9855  0.9701  0.9538  0.9369  0.9194
+Total computing time : 0h00m07s
+Note: 1 warning(s) encountered in the preprocessor
