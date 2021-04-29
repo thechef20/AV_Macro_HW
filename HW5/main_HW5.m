@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 clc;
 clear
 cd /Users/matt/Desktop/Advanced_Macro/HW/HW5
@@ -62,7 +61,6 @@ legend('SUS_t')
 axis([0 100 0.45 0.54])
 saveas(gcf,'Q1_figure.png');
 
-=======
 clc;
 clear
 cd /Users/matt/Desktop/Advanced_Macro/HW/HW5
@@ -125,5 +123,3 @@ xlabel('Horizon')
 legend('SUS_t')
 axis([0 100 0.45 0.52])
 saveas(gcf,'Q1_figure.png');
-
->>>>>>> 66526399fb27f1e6a304974ef6d2a78aff43deb7
